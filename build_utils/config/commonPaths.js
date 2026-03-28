@@ -5,7 +5,7 @@ const PROJECT_ROOT = path.resolve(__dirname, "../../");
 module.exports = {
   projectRootPath: PROJECT_ROOT,
   entryPath: path.join(PROJECT_ROOT, "src", "index.js"),
-  outputPath: path.join(PROJECT_ROOT, "build"),
+  outputPath: path.join(PROJECT_ROOT, "dist"),
   appEntryPath: path.join(PROJECT_ROOT, "src"),
   buildUtilsPath: path.join(PROJECT_ROOT, "build_utils"),
 };
