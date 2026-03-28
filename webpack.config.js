@@ -44,9 +44,20 @@ module.exports = {
         exclude: /node_modules/, // exclude node_modules
         use: ["babel-loader"],
       },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg)$/,
+        type: 'asset/resource',
+      }
     ],
   },
   resolve: {
-    extensions: ["*", ".js", ".jsx"],
+    extensions: [".js", ".jsx", ".ts", ".tsx"]
   },
+  devtool: 'source-map',
+  mode: isDebug ? 'development' : 'production',
+
 };
