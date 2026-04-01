@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.ts ",
     "start": "webpack serve --mode development"
   },
   "keywords": [],
@@ -14,20 +14,29 @@
     "@babel/core": "^7.29.0",
     "@babel/preset-env": "^7.29.2",
     "@babel/preset-react": "^7.28.5",
+    "@babel/preset-typescript": "^7.28.5",
+    "@types/node": "^25.5.0",
+    "@types/react-dom": "^19.2.3",
     "babel-loader": "^9.2.1",
+    "clean-webpack-plugin": "^4.0.0",
+    "cross-env": "^10.1.0",
     "css-loader": "^7.1.4",
+    "css-minimizer-webpack-plugin": "^8.0.0",
     "html-webpack-plugin": "^5.6.6",
     "mini-css-extract-plugin": "^2.10.2",
     "sass": "^1.98.0",
     "sass-loader": "^16.0.7",
     "style-loader": "^4.0.0",
     "ts-loader": "^9.5.4",
+    "ts-node": "^10.9.2",
     "typescript": "^6.0.2",
     "webpack": "^5.105.4",
     "webpack-cli": "^7.0.2",
     "webpack-dev-server": "^5.2.3"
   },
   "dependencies": {
+    "@babel/register": "^7.28.6",
+    "core-js": "^3.49.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4"
   }
